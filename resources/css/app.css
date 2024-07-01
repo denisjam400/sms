@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none;
+}
+
+.reg_img {
+    background: url("/public/asset/Images/522b9778881d0795a2931099c8848026.jpg");
+    background-size: contain;
+    background-position: center;
+}
+
+.darken_img {
+    background-image: linear-gradient(
+            45deg,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url("/public/asset/Images/8d7d44ace1c266fc28fe7cf8e07d6f01.jpg");
+}
+
+.scrollbarhider::-webkit-scrollbar {
+    display: none;
+}
+
+/* Profile Modal Display Start */
+
+.Profile_Container_Class_Disappear {
+    display: none;
+}
+
+.Profile_Container_Class {
+    position: absolute;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 60px;
+    background: white;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid gainsboro;
+}
+
+/* Profile Modal Display Ends */
+
+/* Table */
+
+th {
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #ffcb67;
+    color: white;
+}
+
+tr:nth-child(odd) {
+    border-left: 1px solid #ffcb67;
+    border-right: 1px solid #ffcb67;
+}
+
+tr:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* Active Nav Class */
+
+.navSubContainer {
+    background-color: rgb(255 203 103);
+    text-decoration-color: white;
+}
+
+@layer base {
+    .border-top-90 {
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 90%;
+            height: 2px;
+            background-color: #fab330;
+            transform: translate(5%, 50%);
+        }
+
+        border-top: none;
+    }
+}
